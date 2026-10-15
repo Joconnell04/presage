@@ -1,0 +1,43 @@
+# presage.ingest dependencies
+# Verified by installing into a 3.12.13 venv on macOS 26.7 / Apple M5 and running
+# `python -m presage.ingest.smoke sample_context`. Do not add these to pyproject.toml
+# directly; the owner of pyproject merges the per-agent lists.
+
+# --- required at runtime -----------------------------------------------------
+openpyxl==3.1.5          # xlsx / xlsm / xltx / xltm, cached formula values, merged cells
+pymupdf==1.28.2          # pdf text, page-aware
+python-docx==1.2.0       # docx paragraphs, headings, tables
+python-pptx==1.0.2       # pptx slides, titles, tables, speaker notes
+watchdog==6.0.0          # Index.watch(folder, on_change)
+# sqlite3, csv, json, zipfile are stdlib. BM25 is stdlib (presage/ingest/search.py).
+
+# --- optional: dense half of the hybrid search -------------------------------
+# Numpy only, no torch. Off unless minishlab/potion-base-8M is already in the
+# HuggingFace cache; set PRESAGE_DENSE=1 to allow the one-time ~30 MB download.
+# Measured: 0.03 ms to embed a query, 336 ms to embed 2,000 chunks, 2.0 MB of vectors.
+model2vec==0.9.0
+# pulls numpy 2.5.3, tokenizers 2.x, huggingface-hub, safetensors, joblib, tqdm
+
+# --- sample data generation only (presage/ingest/gen_samples.py) -------------
+reportlab==5.0.1         # Market_Report.pdf
+# openpyxl / python-pptx / python-docx above cover the other sample files
+
+# --- evaluated and NOT used --------------------------------------------------
+# duckdb==1.5.5      read_xlsx returns one column and stops at the first blank row on a
+#                    messy sheet unless given an exact range, which is the problem we are
+#                    solving. No cell addresses, so no "P&L > D6" citation. Rejected.
+# bm25s==0.3.11      Genuinely faster to query (0.019 ms vs 0.444 ms at 2,000 chunks) but
+#                    both are far inside the 20 ms budget, and it adds a dependency plus
+#                    its own on-disk format. Revisit above ~20,000 chunks.
+# rank-bm25==0.2.2   0.623 ms at 2,000 chunks and no persistence at all. Rejected.
+
+# --- install -----------------------------------------------------------------
+# uv venv .venv --python 3.12
+# uv pip install --python .venv/bin/python openpyxl pymupdf python-docx python-pptx \
+#     watchdog reportlab model2vec
+
+# --- deep index (presage/ingest/deep.py), added 2026-09-21 ------------------
+# No new packages. It uses model2vec (already listed, for qa_matches), openpyxl formula
+# text already in the `cells` table, and stdlib hashlib/json/re/asyncio. The model calls
+# go through the caller's own llm_json (brain.llm.classify), so ingest imports no provider
+# SDK. python-dotenv is used only by the smoke harness and is already a project dep.

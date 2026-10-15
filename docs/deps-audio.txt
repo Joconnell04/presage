@@ -1,0 +1,17 @@
+# presage audio capture — Python dependencies
+#
+# The audio path deliberately has one dependency. Everything macOS-specific lives in
+# the Swift helper (presage/native/audiotap/main.swift), which needs no packages at
+# all: swiftc from CommandLineTools, linking CoreAudio + AVFoundation + Foundation.
+
+numpy>=2.0
+
+# Deliberately NOT used, with reasons (see docs/research-audio.md):
+#   audiotap        0.0.2  - ignores its own sample_rate argument (asking for 16 kHz
+#                            returns ~48 kHz audio labelled 16 kHz), runs the Python
+#                            callback on the Core Audio real-time thread, alpha.
+#   call-copilot    0.4.5  - records to WAV and transcribes after the call; wrong shape.
+#   sounddevice / PyAudio  - PortAudio has no process-tap backend, so system audio
+#                            would need a virtual driver.
+#   ScreenCaptureKit via pyobjc - works, but drags in a video capture session and the
+#                            full screen-recording grant for audio we can get directly.

@@ -1,0 +1,70 @@
+[project]
+name = "presage"
+version = "0.1.0"
+description = "Local real-time call copilot: speculative prefetch answers from your context files while you talk."
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    # llm
+    "anthropic>=1.6",
+    "python-dotenv>=1.0",
+    "google-genai>=1.0",
+    "claude-agent-sdk>=0.1",
+    # server + ui
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "websockets>=15",
+    # audio / stt
+    "numpy>=2.0",
+    "parakeet-mlx>=0.5.2",
+    "onnxruntime>=1.30",
+    "tokenizers>=0.20",
+    # ingest
+    "openpyxl>=3.1.5",
+    "pymupdf>=1.26",
+    "python-docx>=1.2",
+    "python-pptx>=1.0.2",
+    "watchdog>=6.0",
+    "model2vec>=0.9",
+    "reportlab>=4",
+    "pycel>=1.0b30",
+]
+
+[project.optional-dependencies]
+# The local typed-decision gate (presage/llm/laya.py). Not installed by default: 610 MB of torch and
+# transformers for a 421M-parameter encoder, and presage runs fine without it. `uv sync --extra laya`.
+# transformers is floored at 5 because the checkpoints were saved with the nested `rope_parameters`
+# config; 4.x reads them with the wrong RoPE base and answers differently (docs/research-laya.md).
+laya = [
+    "torch>=2.4",
+    "transformers>=5.0",
+    "safetensors>=0.4",
+    "huggingface_hub>=0.30",
+    "numpy>=2.0",
+]
+
+# The same gate through Core ML (presage/llm/laya_fast/). 47 ms instead of 75 on this M5 and a
+# 7-second load instead of 21 (docs/experiments/E1-gate-speed.md). Running the exported package
+# needs coremltools and the tokenizer presage already ships; torch and transformers are needed only
+# to build it, which is why this extra does not include the `laya` one.
+laya-fast = [
+    "coremltools>=8.3",
+    "numpy>=2.0",
+]
+
+# The local answer model (presage/llm/local_mlx.py, `make_llm("local")`): a 4-bit model on this
+# Mac's GPU instead of the subscription, for a mode with no network at all. mlx is already a
+# dependency through parakeet-mlx, so this adds mlx-lm and sentencepiece and nothing else.
+# `uv sync --extra local`, then `hf download mlx-community/Qwen3.5-4B-MLX-4bit` (3.1 GB).
+local = [
+    "mlx-lm>=0.31.3",
+]
+
+# Alternative STT models through mlx-audio (presage/stt/mlxaudio.py, E69a): IBM Granite 4.1 2B NAR
+# and 5.0 TurboCTC, Qwen3-ASR. Opt-in: `uv sync --extra stt-alt`, then STT_PROVIDER=granite-nar.
+# Parakeet stays the default; the Granite gain was measured on sets IBM trained on.
+stt-alt = [
+    "mlx-audio[stt]>=0.5.5",
+]
+
+[tool.uv]
+package = false

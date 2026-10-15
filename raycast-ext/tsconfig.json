@@ -1,0 +1,1 @@
+{ "compilerOptions": { "lib": ["ES2023"], "module": "commonjs", "target": "ES2022", "strict": true, "isolatedModules": true, "esModuleInterop": true, "jsx": "react-jsx", "resolveJsonModule": true, "skipLibCheck": true }, "include": ["src/**/*"] }

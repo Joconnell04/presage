@@ -1,0 +1,30 @@
+# STT dependencies for presage — merge into pyproject.toml [project].dependencies
+# Verified installing cleanly on macOS 26.7 / Apple M5 / Python 3.12.13 (uv 0.12.2),
+# rechecked 2026-09-21. Total installed size ~420 MB.
+
+numpy>=2.0            # PCM buffers, the interface currency
+parakeet-mlx>=0.5.2   # NVIDIA Parakeet TDT 0.6B v3 on MLX; pulls mlx + mlx-metal
+onnxruntime>=1.30     # Silero VAD and the turn detector; ~30 MB, no torch
+tokenizers>=0.20      # Qwen2.5 BPE for the turn detector (already pulled in by
+                      # parakeet-mlx's stack, listed so the need is explicit)
+websockets>=15        # Deepgram provider only; tiny, keep it unconditional
+
+# NOT dependencies, deliberately:
+#   silero-vad   -> drags in torch + torchaudio (~1 GB) to run a 1.3 MB ONNX file.
+#                   The weights are vendored at presage/stt/silero_vad_16k_op15.onnx
+#                   (copied from silero-vad 6.2.2) and run on onnxruntime instead.
+#   transformers -> the turn detector needs only tokenizers + onnxruntime. Do not add
+#                   it just to get AutoTokenizer.
+#   deepgram-sdk -> the websockets library plus 40 lines is simpler and one dep.
+#   soundfile / librosa -> only the benchmark harness needed them; smoke.py uses
+#                   the stdlib `wave` module.
+#
+# parakeet-mlx transitively brings: mlx, mlx-metal, huggingface-hub, numpy, typer,
+# rich, dacite, soundfile (its own CLI), librosa. Roughly 400 MB on disk.
+#
+# Model weights are NOT vendored. First run downloads into $HF_HOME
+# (default ~/.cache/huggingface):
+#   mlx-community/parakeet-tdt-0.6b-v3          ~2.4 GB  (ASR)
+#   livekit/turn-detector @ v1.2.2-en             66 MB  (semantic endpointing)
+# The turn detector is optional at runtime: PRESAGE_STT_SEMANTIC_EOT=0 skips loading
+# it, and a failed download degrades to a punctuation heuristic rather than crashing.

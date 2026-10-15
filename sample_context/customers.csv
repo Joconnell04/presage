@@ -1,0 +1,201 @@
+customer_id,customer_name,segment,region,arr_usd,churned,renewal_month,csat
+C1070,Northwind Analytics,Mid-market,EMEA,329600,0,Apr,4.7
+C1135,Foxglove Capital,SMB,North America,88600,0,Mar,4.3
+C1033,Beacon Labs,Enterprise,APAC,973000,0,May,3.8
+C1080,Vantage Capital,Mid-market,EMEA,251300,0,Jun,3.4
+C1114,Palisade Systems,Mid-market,North America,230800,0,Jun,4.6
+C1142,Granite Capital,SMB,North America,88500,0,Mar,3.9
+C1040,Tessera Analytics,Enterprise,LATAM,1029800,0,Jan,3.3
+C1087,Meridian Group,Mid-market,EMEA,137200,0,Apr,4.4
+C1176,Halcyon Energy,SMB,APAC,71900,0,Jan,3.9
+C1074,Northwind Group,Mid-market,North America,145300,0,May,3.8
+C1099,Quarry Retail,Mid-market,North America,215500,0,Jan,4.3
+C1011,Ironwood Energy,Enterprise,North America,730400,0,Feb,4.0
+C1185,Vantage Retail,SMB,EMEA,45200,0,Jun,3.3
+C1144,Lumen Manufacturing,SMB,North America,95300,0,Jun,3.4
+C1045,Granite Foods,Mid-market,LATAM,200500,0,Apr,4.4
+C1148,Lumen Capital,SMB,EMEA,62600,0,Jun,4.3
+C1193,Brightpath Holdings,SMB,North America,54600,0,May,3.4
+C1066,Lumen Capital,Mid-market,APAC,231700,1,Jun,3.2
+C1149,Fairlane Analytics,SMB,EMEA,100500,0,Mar,3.6
+C1058,Thornbury Media,Mid-market,LATAM,301000,0,Mar,4.0
+C1140,Harbour Partners,SMB,North America,68900,0,Jun,3.7
+C1145,Ironwood Holdings,SMB,EMEA,60000,0,Jun,4.4
+C1010,Beacon Holdings,Enterprise,North America,1024900,0,Jan,4.1
+C1077,Brightpath Holdings,Mid-market,APAC,304300,0,May,4.6
+C1134,Anvil Manufacturing,SMB,North America,65300,1,Jan,3.6
+C1046,Halcyon Manufacturing,Mid-market,North America,332000,0,Jan,3.6
+C1031,Granite Analytics,Enterprise,EMEA,924600,0,Jun,3.6
+C1153,Thornbury Health,SMB,EMEA,58900,1,Jun,4.1
+C1165,Meridian Analytics,SMB,North America,57200,0,Apr,4.3
+C1014,Thornbury Holdings,Enterprise,North America,638300,0,Feb,3.8
+C1169,Halcyon Group,SMB,EMEA,49200,0,Jan,4.0
+C1027,Palisade Manufacturing,Enterprise,APAC,676200,0,May,4.7
+C1121,Harbour Labs,SMB,North America,42400,0,Jun,4.5
+C1076,Anvil Energy,Mid-market,North America,319200,0,Jan,4.5
+C1129,Northwind Analytics,SMB,North America,84000,0,May,3.2
+C1057,Tessera Holdings,Mid-market,North America,254000,0,Apr,3.6
+C1015,Solstice Retail,Enterprise,EMEA,660300,0,Apr,4.5
+C1190,Tessera Manufacturing,SMB,EMEA,70600,0,Apr,3.1
+C1171,Quarry Analytics,SMB,North America,81500,0,Jun,4.6
+C1170,Palisade Foods,SMB,LATAM,83900,0,Mar,4.1
+C1159,Cedarwood Foods,SMB,North America,38500,0,Feb,3.3
+C1055,Lumen Analytics,Mid-market,APAC,160300,0,Apr,4.6
+C1021,Vantage Logistics,Enterprise,EMEA,955100,0,Jan,3.3
+C1115,Brightpath Capital,Mid-market,North America,161200,0,Feb,3.6
+C1150,Cobalt Systems,SMB,EMEA,67900,0,Apr,3.9
+C1173,Ironwood Labs,SMB,APAC,80900,0,Jun,4.4
+C1181,Granite Media,SMB,North America,39500,0,Apr,3.3
+C1008,Beacon Health,Enterprise,North America,840000,0,Jan,4.8
+C1003,Harbour Analytics,Enterprise,EMEA,833400,1,Jun,4.5
+C1035,Vantage Foods,Enterprise,EMEA,470400,0,May,3.8
+C1047,Northwind Health,Mid-market,North America,144700,0,May,4.6
+C1105,Cedarwood Health,Mid-market,EMEA,251600,0,Mar,4.8
+C1028,Cobalt Group,Enterprise,North America,597700,0,Feb,3.3
+C1090,Meridian Retail,Mid-market,North America,255500,0,Jan,3.4
+C1083,Beacon Retail,Mid-market,North America,283900,0,Mar,3.2
+C1032,Granite Partners,Enterprise,LATAM,947000,0,Mar,3.2
+C1086,Foxglove Health,Mid-market,LATAM,139300,0,Apr,3.9
+C1128,Tessera Labs,SMB,EMEA,97000,0,Apr,4.1
+C1041,Mainsail Logistics,Enterprise,North America,603500,1,Apr,3.8
+C1167,Lumen Foods,SMB,North America,56600,0,Jun,3.8
+C1180,Beacon Logistics,SMB,EMEA,96200,0,Mar,3.5
+C1158,Cedarwood Capital,SMB,LATAM,75000,0,Jun,4.7
+C1020,Orchard Partners,Enterprise,LATAM,880300,0,Mar,4.7
+C1098,Fairlane Group,Mid-market,APAC,130500,0,May,3.6
+C1069,Halcyon Health,Mid-market,North America,330200,0,Jun,3.5
+C1174,Granite Group,SMB,North America,78600,0,Mar,3.4
+C1113,Northwind Retail,Mid-market,EMEA,298800,0,Feb,3.1
+C1146,Harbour Capital,SMB,EMEA,81300,0,Jun,4.7
+C1125,Orchard Media,SMB,APAC,83300,0,Mar,3.7
+C1184,Fairlane Manufacturing,SMB,LATAM,41400,1,Mar,3.9
+C1053,Northwind Systems,Mid-market,APAC,310900,0,Apr,3.6
+C1194,Lumen Foods,SMB,EMEA,47800,0,Apr,3.9
+C1191,Solstice Foods,SMB,EMEA,53000,0,Jun,4.5
+C1054,Mainsail Energy,Mid-market,North America,205600,0,Feb,3.3
+C1107,Cedarwood Systems,Mid-market,APAC,324700,0,Jun,3.1
+C1152,Quarry Foods,SMB,APAC,68500,0,Feb,3.6
+C1096,Brightpath Manufacturing,Mid-market,North America,226000,0,Jun,4.0
+C1018,Brightpath Labs,Enterprise,North America,857200,1,May,4.4
+C1124,Solstice Systems,SMB,North America,62200,0,Jan,3.9
+C1067,Beacon Capital,Mid-market,EMEA,285700,1,Jun,4.2
+C1089,Quarry Holdings,Mid-market,North America,273500,0,Mar,4.8
+C1131,Halcyon Analytics,SMB,APAC,65900,0,Mar,4.6
+C1123,Vantage Capital,SMB,North America,99400,0,Jun,3.7
+C1126,Cedarwood Retail,SMB,APAC,43100,0,Jan,4.8
+C1002,Cedarwood Retail,Enterprise,North America,712300,0,Jun,4.9
+C1013,Granite Labs,Enterprise,North America,396000,0,Jun,3.4
+C1139,Granite Foods,SMB,APAC,40800,0,May,3.3
+C1183,Vantage Foods,SMB,North America,41400,0,Mar,3.6
+C1025,Fairlane Retail,Enterprise,EMEA,1019100,0,May,4.0
+C1043,Granite Manufacturing,Enterprise,North America,987000,0,Mar,4.1
+C1138,Thornbury Analytics,SMB,North America,39500,0,May,4.3
+C1122,Brightpath Logistics,SMB,North America,44300,0,Apr,3.8
+C1143,Foxglove Systems,SMB,North America,54700,0,Feb,3.9
+C1154,Beacon Retail,SMB,North America,57300,0,May,3.5
+C1168,Harbour Partners,SMB,North America,69300,0,Apr,3.3
+C1141,Kestrel Capital,SMB,LATAM,44500,0,Apr,3.4
+C1160,Mainsail Logistics,SMB,APAC,77500,0,May,4.7
+C1006,Harbour Energy,Enterprise,North America,469200,0,Jun,3.8
+C1132,Thornbury Energy,SMB,North America,79300,0,Jun,3.5
+C1012,Ironwood Group,Enterprise,North America,992100,0,May,3.7
+C1177,Meridian Holdings,SMB,EMEA,87700,0,Jun,4.0
+C1095,Solstice Partners,Mid-market,EMEA,245400,0,Jun,3.4
+C1103,Granite Analytics,Mid-market,EMEA,293000,0,Jan,4.1
+C1091,Beacon Foods,Mid-market,EMEA,319400,0,Jan,3.6
+C1133,Palisade Group,SMB,North America,46500,0,Feb,4.6
+C1004,Beacon Retail,Enterprise,EMEA,783400,0,Mar,4.0
+C1186,Ridgeline Holdings,SMB,APAC,45400,0,Feb,3.1
+C1048,Halcyon Energy,Mid-market,LATAM,234100,0,Apr,4.0
+C1117,Solstice Media,SMB,North America,60200,0,Feb,4.2
+C1119,Granite Foods,SMB,EMEA,56600,0,Mar,4.7
+C1064,Quarry Labs,Mid-market,APAC,317700,1,Apr,4.2
+C1198,Fairlane Manufacturing,SMB,EMEA,64600,0,Apr,3.3
+C1196,Foxglove Capital,SMB,LATAM,38300,0,May,4.8
+C1187,Ridgeline Health,SMB,EMEA,53700,0,Feb,3.2
+C1036,Ironwood Group,Enterprise,North America,727100,0,Feb,3.4
+C1175,Tessera Media,SMB,North America,66900,0,Jun,4.8
+C1116,Foxglove Foods,SMB,North America,38200,0,Jun,4.2
+C1108,Halcyon Labs,Mid-market,North America,177200,1,Jan,4.7
+C1120,Halcyon Logistics,SMB,LATAM,59300,0,Apr,3.2
+C1088,Fairlane Media,Mid-market,North America,305700,0,Mar,3.2
+C1093,Foxglove Labs,Mid-market,APAC,207600,0,Jun,4.1
+C1092,Fairlane Manufacturing,Mid-market,North America,233900,0,Apr,4.5
+C1026,Anvil Logistics,Enterprise,North America,953700,0,Jun,4.1
+C1039,Vantage Health,Enterprise,EMEA,554300,0,Feb,4.5
+C1059,Kestrel Capital,Mid-market,North America,234000,0,Mar,4.1
+C1104,Meridian Group,Mid-market,EMEA,235300,0,Jan,4.0
+C1001,Fairlane Capital,Enterprise,North America,638700,0,Jan,3.6
+C1179,Kestrel Media,SMB,North America,71200,1,Jun,4.7
+C1065,Orchard Capital,Mid-market,EMEA,193100,0,Apr,3.2
+C1110,Kestrel Holdings,Mid-market,APAC,265000,0,May,4.5
+C1155,Ridgeline Manufacturing,SMB,APAC,55800,0,May,3.6
+C1005,Northwind Retail,Enterprise,APAC,891400,0,Jan,4.0
+C1052,Orchard Foods,Mid-market,EMEA,131500,0,Apr,4.0
+C1161,Anvil Labs,SMB,EMEA,61900,0,Jan,4.1
+C1109,Northwind Energy,Mid-market,North America,146300,0,Jan,4.9
+C1063,Orchard Manufacturing,Mid-market,North America,235000,0,Mar,4.5
+C1178,Orchard Partners,SMB,North America,73800,0,Jun,3.2
+C1156,Palisade Labs,SMB,North America,58200,0,Jun,3.3
+C1151,Palisade Systems,SMB,EMEA,45200,0,May,4.6
+C1102,Lumen Manufacturing,Mid-market,APAC,139100,0,Mar,3.7
+C1038,Lumen Partners,Enterprise,EMEA,513300,0,Mar,4.6
+C1188,Tessera Energy,SMB,North America,47600,0,Jun,4.2
+C1081,Beacon Logistics,Mid-market,North America,246400,0,Jun,4.3
+C1130,Fairlane Health,SMB,EMEA,62900,0,Apr,4.7
+C1056,Cobalt Energy,Mid-market,North America,284900,0,Jun,3.7
+C1195,Orchard Logistics,SMB,North America,39400,0,Mar,4.7
+C1017,Brightpath Energy,Enterprise,North America,625300,0,Apr,4.4
+C1164,Meridian Logistics,SMB,LATAM,55000,0,Feb,4.2
+C1200,Solstice Manufacturing,SMB,EMEA,96500,0,May,3.5
+C1016,Orchard Retail,Enterprise,EMEA,499000,0,Jan,4.3
+C1061,Palisade Energy,Mid-market,EMEA,233800,0,Apr,4.0
+C1079,Beacon Labs,Mid-market,North America,288500,0,Jun,4.0
+C1051,Palisade Manufacturing,Mid-market,North America,186600,0,May,3.6
+C1062,Brightpath Energy,Mid-market,EMEA,227800,0,Feb,4.1
+C1022,Mainsail Labs,Enterprise,North America,1028000,0,Mar,4.7
+C1137,Palisade Health,SMB,North America,46000,0,May,4.4
+C1044,Anvil Systems,Enterprise,APAC,757300,0,Mar,3.5
+C1073,Solstice Group,Mid-market,North America,209200,0,May,3.2
+C1189,Ironwood Foods,SMB,EMEA,98900,0,Jan,3.7
+C1192,Tessera Partners,SMB,APAC,80700,1,May,4.0
+C1118,Halcyon Capital,SMB,North America,45800,0,Jan,3.8
+C1197,Foxglove Analytics,SMB,APAC,43200,0,Apr,4.6
+C1112,Ironwood Energy,Mid-market,EMEA,131200,0,May,4.5
+C1029,Solstice Group,Enterprise,EMEA,522500,0,Jun,4.7
+C1182,Meridian Analytics,SMB,North America,95300,0,Jan,3.5
+C1085,Palisade Energy,Mid-market,North America,272100,0,May,3.3
+C1037,Halcyon Health,Enterprise,EMEA,818400,0,Apr,4.4
+C1162,Palisade Media,SMB,North America,92600,0,Jan,4.8
+C1023,Harbour Partners,Enterprise,North America,787100,1,Jun,3.8
+C1100,Brightpath Manufacturing,Mid-market,North America,256600,0,Jun,4.3
+C1007,Orchard Logistics,Enterprise,EMEA,1006800,0,May,3.4
+C1071,Tessera Retail,Mid-market,North America,176800,0,Jun,3.2
+C1009,Beacon Retail,Enterprise,North America,833000,1,Mar,3.9
+C1068,Foxglove Energy,Mid-market,EMEA,228400,0,May,4.7
+C1082,Palisade Energy,Mid-market,LATAM,179400,0,Jan,3.7
+C1094,Halcyon Logistics,Mid-market,EMEA,219900,0,May,4.1
+C1111,Palisade Holdings,Mid-market,APAC,241800,0,May,4.6
+C1163,Vantage Analytics,SMB,APAC,81400,0,Mar,3.7
+C1072,Northwind Manufacturing,Mid-market,North America,127400,0,May,4.6
+C1042,Cedarwood Capital,Enterprise,North America,580100,1,Mar,3.2
+C1078,Vantage Labs,Mid-market,EMEA,222600,0,Jan,4.0
+C1166,Tessera Group,SMB,North America,64800,0,Jan,3.7
+C1106,Cobalt Energy,Mid-market,EMEA,287400,0,Feb,4.2
+C1075,Orchard Systems,Mid-market,APAC,165000,0,Apr,3.4
+C1024,Ridgeline Partners,Enterprise,North America,438700,0,Jan,3.2
+C1034,Thornbury Health,Enterprise,EMEA,724500,0,Jan,4.0
+C1050,Cedarwood Holdings,Mid-market,EMEA,155900,1,Feb,3.7
+C1136,Anvil Analytics,SMB,EMEA,91700,0,Jan,4.6
+C1097,Fairlane Health,Mid-market,North America,170100,0,Jun,3.9
+C1084,Mainsail Group,Mid-market,North America,254100,0,Jan,4.6
+C1147,Orchard Systems,SMB,EMEA,80400,0,Apr,3.4
+C1101,Cedarwood Holdings,Mid-market,North America,326000,0,Mar,3.4
+C1060,Orchard Systems,Mid-market,North America,190300,0,Apr,3.3
+C1172,Vantage Group,SMB,North America,40900,0,May,3.6
+C1157,Lakeshore Logistics,SMB,APAC,88200,0,Jan,4.3
+C1019,Brightpath Labs,Enterprise,North America,571000,0,Jan,4.3
+C1049,Anvil Energy,Mid-market,North America,233700,0,Feb,4.3
+C1199,Northwind Group,SMB,North America,60300,0,May,4.2
+C1127,Palisade Media,SMB,APAC,39100,0,Jun,4.1
+C1030,Harbour Group,Enterprise,North America,456600,0,Feb,4.6

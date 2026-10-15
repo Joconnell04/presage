@@ -1,0 +1,75 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "presage",
+  "title": "Presage",
+  "description": "Listening on/off for presage, the local call copilot.",
+  "icon": "icon.png",
+  "author": "joconnell04",
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "launch",
+      "title": "Launch Presage",
+      "subtitle": "Presage",
+      "description": "Start the server if it is down and open the page.",
+      "mode": "no-view"
+    },
+    {
+      "name": "toggle",
+      "title": "Toggle Presage",
+      "subtitle": "Presage",
+      "description": "Listening on or off. Starts the server if it is down.",
+      "mode": "no-view"
+    },
+    {
+      "name": "pause",
+      "title": "Pause Presage",
+      "subtitle": "Presage",
+      "description": "Stop listening. Stays off until Listen.",
+      "mode": "no-view"
+    },
+    {
+      "name": "listen",
+      "title": "Presage Listen",
+      "subtitle": "Presage",
+      "description": "Start listening. Starts the server if it is down.",
+      "mode": "no-view"
+    },
+    {
+      "name": "quit",
+      "title": "Quit Presage",
+      "subtitle": "Presage",
+      "description": "Stop the server.",
+      "mode": "no-view"
+    }
+  ],
+  "preferences": [
+    {
+      "name": "port",
+      "title": "Port",
+      "description": "The presage server's port.",
+      "type": "textfield",
+      "required": false,
+      "default": "8766"
+    },
+    {
+      "name": "repo",
+      "title": "Checkout",
+      "description": "The presage checkout (run.sh lives here).",
+      "type": "textfield",
+      "required": false,
+      "default": "~/presage"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.4.0"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop"
+  }
+}

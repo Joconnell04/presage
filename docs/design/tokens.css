@@ -1,0 +1,93 @@
+/* presage design tokens. Copy of the block between tokens:begin and tokens:end in ui/index.html,
+   which is the source. Check: diff <(sed -n '/tokens:begin/,/tokens:end/p' ui/index.html) <(tail -n +3 docs/design/tokens.css) */
+/* tokens:begin  (docs/design/tokens.css is a copy of this block) */
+:root{
+  color-scheme:dark;
+  /* surfaces, back to front */
+  --bg:#0b0b0d;
+  --surface-1:#111114;
+  --surface-2:#16161a;
+  --surface-3:#1e1e23;
+  --surface-sel:#24242b;
+  --border:#222228;
+  --border-strong:#2e2e36;
+  --divider:#1a1a1f;
+  /* text, loud to quiet */
+  --text-1:#f5f5f8;
+  --text-2:#d2d2da;
+  --text-3:#8d8d98;
+  --text-4:#70707b;              /* 4.0:1 on --bg: tertiary, still readable at a glance */
+  /* accent: Me, focus, selection, the live dot */
+  --accent:#7c8cff;
+  --accent-text:#a9b3ff;
+  --accent-soft:rgba(124,140,255,.14);
+  --accent-line:rgba(124,140,255,.42);
+  /* state: colour only ever means one of these */
+  --ok:#5ee0b1;      --ok-soft:rgba(94,224,177,.13);
+  --warm:#f0b35a;    --warm-soft:rgba(240,179,90,.13);
+  --bad:#f4676d;     --bad-soft:rgba(244,103,109,.14);
+  --web:#5ab6ff;     --web-soft:rgba(90,182,255,.14);
+  --derived:#ff9151; --derived-soft:rgba(255,145,81,.14);
+  --glow:55%;
+  /* controls */
+  --seg-bg:#111114;
+  --seg-on:#26262e;
+  --seg-on-shadow:inset 0 1px 0 rgba(255,255,255,.04);
+  --scroll-thumb:#2a2a31;
+  --scrim:rgba(4,4,6,.56);
+  /* elevation */
+  --e1:inset 0 1px 0 rgba(255,255,255,.025),0 18px 40px -24px rgba(0,0,0,.9);
+  --e2:0 20px 56px -12px rgba(0,0,0,.8),0 0 0 1px rgba(0,0,0,.45);
+  --e3:-28px 0 64px -30px rgba(0,0,0,.9);
+  /* type */
+  --font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-display:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",sans-serif;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,monospace;
+  --fs-xs:11px; --fs-cap:10.5px; --fs-meta:11.5px; --fs-sm:12px; --fs-ui:12.5px; --fs-body:13.5px; --fs-row:14.5px;
+  --fs-detail:16px; --fs-lede:24px; --fs-say:32px; --fs-figure:62px;
+  /* space, 4 px grid */
+  --s1:2px; --s2:4px; --s3:6px; --s4:8px; --s5:10px; --s6:12px; --s7:16px; --s8:20px; --s9:24px; --s10:32px;
+  /* radii */
+  --r-xs:4px; --r-sm:6px; --r-md:8px; --r-lg:12px; --r-xl:14px;
+  /* sizes */
+  --h-bar:48px; --h-row:34px; --h-ctl:28px; --h-kbd:20px; --top-min:300px;
+  --max-w:1760px;
+  --gutter:max(16px, calc((100vw - var(--max-w)) / 2));
+  /* motion */
+  --ease:cubic-bezier(.2,.7,.3,1);
+  --d1:90ms; --d2:160ms; --d3:220ms; --d4:620ms;
+}
+:root[data-theme="light"]{
+  color-scheme:light;
+  --bg:#f4f4f6;
+  --surface-1:#ffffff;
+  --surface-2:#ffffff;
+  --surface-3:#ececf0;
+  --surface-sel:#e6e8f6;
+  --border:#e1e1e7;
+  --border-strong:#d0d0d9;
+  --divider:#ebebef;
+  --text-1:#0f0f12;
+  --text-2:#2a2a30;
+  --text-3:#686873;
+  --text-4:#7e7e88;
+  --accent:#4f5fe8;
+  --accent-text:#3d4cd4;
+  --accent-soft:rgba(79,95,232,.10);
+  --accent-line:rgba(79,95,232,.40);
+  --ok:#0a7c59;      --ok-soft:rgba(10,124,89,.10);      /* state colours are text too (tags, scratch values): */
+  --warm:#946009;    --warm-soft:rgba(148,96,9,.11);     /* each clears 4.3:1 on the selected row */
+  --bad:#c42b41;     --bad-soft:rgba(196,43,65,.09);
+  --web:#15679f;     --web-soft:rgba(21,103,159,.09);
+  --derived:#b04a0c; --derived-soft:rgba(176,74,12,.10);
+  --glow:0%;
+  --seg-bg:#ebebef;
+  --seg-on:#ffffff;
+  --seg-on-shadow:0 1px 2px rgba(15,15,30,.12),0 0 0 1px rgba(15,15,30,.06);
+  --scroll-thumb:#cfcfd8;
+  --scrim:rgba(20,20,28,.20);
+  --e1:0 1px 2px rgba(15,15,30,.05),0 10px 28px -18px rgba(15,15,30,.22);
+  --e2:0 18px 48px -14px rgba(15,15,30,.26),0 0 0 1px rgba(15,15,30,.06);
+  --e3:-24px 0 56px -28px rgba(15,15,30,.28);
+}
+/* tokens:end */
